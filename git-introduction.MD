@@ -11,7 +11,7 @@
 * This development happens in your local, so these files will appear in github we need to follow few steps:
 
 **1)**
-**git add <Here you add files one by one>**
+**git add "<Here you add files one by one>"**
 
 otherwise you add at a time all files 
 
