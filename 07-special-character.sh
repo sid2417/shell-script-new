@@ -13,4 +13,8 @@ echo "your current directory :: $PWD"
 
 echo "which user using this :: $USER"
 
+echo "your home directory :: $HOME"
+
+echo "your script name :: $0"
+
 echo "process instance id :: "
