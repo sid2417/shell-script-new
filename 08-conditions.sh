@@ -11,13 +11,16 @@ else
 fi
 
 
-dnf install nginxxx 
+# dnf install nginxxx 
+
+dnf install nginx -y
 
 if [ $? -eq 0 ]
 then
     echo "Your installation is going Success.."
 else
     echo "Your installation is going Error.."
+    exit 3
 fi
 
 
