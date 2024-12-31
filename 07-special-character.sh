@@ -21,4 +21,4 @@ echo "process instance id of current file or script :: $$ "
 
 sleep 60
 
-echo "process instance id of backgroup of current script :: $!"
+echo "process instance id of last backgroup of command :: $!"
