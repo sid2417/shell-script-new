@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo -s "Please Enter Your UserName :: "
+echo "Please Enter Your UserName :: "
 
-read USERNAME   # Here USERNAME is variable
+read -s USERNAME   # Here USERNAME is variable
 
-echo -s "Please Enter Your Password :: "
+echo "Please Enter Your Password :: "
 
-read PASSWORD    # Here PASSWORD is variable
+read -s PASSWORD    # Here PASSWORD is variable
