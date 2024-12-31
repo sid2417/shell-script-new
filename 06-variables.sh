@@ -1,7 +1,7 @@
 #!/bin/bash
 
 VARIABLE1=$1
-VARIABLE2=$2
+# VARIABLE2=$2
 
 if [ $VARIABLE1 -gt 10 ]
 then
