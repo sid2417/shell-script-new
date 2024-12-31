@@ -18,3 +18,5 @@ echo "your home directory :: $HOME"
 echo "your script name :: $0"
 
 echo "process instance id of current file or script :: $$ "
+
+sleep 60
