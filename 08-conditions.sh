@@ -11,9 +11,9 @@ else
 fi
 
 
-# dnf install nginxxx 
+dnf install nginxxx 
 
-dnf install nginx -y
+# dnf install nginx -y
 
 if [ $? -eq 0 ]
 then
