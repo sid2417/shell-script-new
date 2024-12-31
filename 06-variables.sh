@@ -11,6 +11,8 @@ else
 fi
 
 
-SUM=$($1+$2)
+SUM=$(($NUMBER1+$NUMBER2))
+
+
 
 echo "The total sum of $1 + $2 is :: $SUM"
