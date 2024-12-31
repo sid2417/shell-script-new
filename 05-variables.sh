@@ -7,3 +7,5 @@ read -s USERNAME   # Here USERNAME is variable
 echo "Please Enter Your Password :: "
 
 read -s PASSWORD    # Here PASSWORD is variable
+
+echo "Your username is :: $USERNAME   and   Password is  :: $PASSWORD"
