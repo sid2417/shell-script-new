@@ -20,3 +20,5 @@ echo "your script name :: $0"
 echo "process instance id of current file or script :: $$ "
 
 sleep 60
+
+echo "process instance id of backgroup of current script :: $!"
