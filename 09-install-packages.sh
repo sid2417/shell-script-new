@@ -28,7 +28,14 @@ else
     echo -e $G"You Have already SUDO access..."$N
 fi
 
-
+VALIDATE(){
+    if [ $1 -ne 0 ]
+    then    
+        echo "$2 FAILED.. "
+    else
+        echo "$2 SUCCESS.."
+    fi
+}
 
 for packages in $@
 do
@@ -37,6 +44,7 @@ do
     if [ $? -ne 0 ]
     then
         dnf install $packages -y &>>$LOGFILE
+        VALIDATE $? "mysql installtion is ::"
     else    
         echo -e $G"$packages is already installed in your server"$N &>>$LOGFILE
     fi
