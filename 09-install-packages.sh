@@ -7,10 +7,10 @@
 # 4. Need colors
 # 5. install packages in loop manner
 
-Y="\e[30m"
+
 R="\e[31m"
 G="\e[32m"
-B="\e[33m"
+Y="\e[33m"
 N="\e[0m"
 
 USERID=$(id -u)
@@ -22,14 +22,9 @@ else
     echo -e $G"You Have already SUDO access..."$N
 fi
 
-
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
-
-
-
-
 
 for packages in $@
 do
