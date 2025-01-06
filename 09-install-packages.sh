@@ -7,6 +7,16 @@
 # 4. Need colors
 # 5. install packages in loop manner
 
+USERID=$(id -u)
+if [ $USERID -ne 0 ]
+then   
+    echo -e $Y "Please Provide ROOT access.." $N
+else    
+    echo -e $G"You Have already SUDO access..."$N
+    exit 2
+fi
+
+
 Y="\e[30m"
 R="\e[31m"
 G="\e[32m"
@@ -18,14 +28,7 @@ LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 
 
-USERID=$(id -u)
-if [ $USERID -ne 0 ]
-then   
-    echo -e $Y "Please Provide ROOT access.." $N
-else    
-    echo -e $G"You Have already SUDO access..."$N
-    exit 2
-fi
+
 
 
 for packages in $@
