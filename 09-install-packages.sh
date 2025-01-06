@@ -39,14 +39,14 @@ VALIDATE(){
 
 for packages in $@
 do
-    echo -e $Y"******$packages*******"$N &>>$LOGFILE
-    dnf list installed $packages 
+    echo -e $Y"******$packages*******"$N 
+    dnf list installed $packages &>>$LOGFILE
     if [ $? -ne 0 ]
     then
         dnf install $packages -y &>>$LOGFILE
         VALIDATE $? "Installtion of $packages ::"
     else    
-        echo -e $G"$packages is already installed in your server"$N &>>$LOGFILE
+        echo -e $G"$packages is already installed in your server"$N 
     fi
 done
 
