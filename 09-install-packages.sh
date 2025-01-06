@@ -13,13 +13,13 @@ G="\e[32m"
 B="\e[33m"
 N="\e[0m"
 
-TIMESTAMP=$(date+%F-%H-%M-%S)
+TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
 SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 
 
 USERID=$(id -u)
-if [ USERID -nq 0 ]
+if [ USERID -ne 0 ]
 then   
     echo -e $G"You Have already SUDO access..."$N
 else    
