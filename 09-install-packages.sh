@@ -44,7 +44,7 @@ do
     if [ $? -ne 0 ]
     then
         dnf install $packages -y &>>$LOGFILE
-        VALIDATE $? "mysql installtion is ::"
+        VALIDATE $? "Installtion of $packages ::"
     else    
         echo -e $G"$packages is already installed in your server"$N &>>$LOGFILE
     fi
