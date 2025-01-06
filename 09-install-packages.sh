@@ -7,6 +7,12 @@
 # 4. Need colors
 # 5. install packages in loop manner
 
+Y="\e[30m"
+R="\e[31m"
+G="\e[32m"
+B="\e[33m"
+N="\e[0m"
+
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then   
@@ -16,12 +22,6 @@ else
     echo -e $G"You Have already SUDO access..."$N
 fi
 
-
-Y="\e[30m"
-R="\e[31m"
-G="\e[32m"
-B="\e[33m"
-N="\e[0m"
 
 TIMESTAMP=$(date +%F-%H-%M-%S)
 LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
