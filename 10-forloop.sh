@@ -1,8 +1,8 @@
-for packages in {$@}
+for packages in $@
 do
     echo $packages
     dnf list installed $packages
-    if [ $? -nq 0 ]
+    if [ $? -ne 0 ]
     then
         dnf install $packages -y
     else    
