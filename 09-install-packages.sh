@@ -19,11 +19,12 @@ SCRIPTNAME=$(echo $0 | cut -d "." -f1)
 
 
 USERID=$(id -u)
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then   
-    echo -e $G"You Have already SUDO access..."$N
-else    
     echo -e $Y "Please Provide ROOT access.." $N
+else    
+    echo -e $G"You Have already SUDO access..."$N
+    exit 2
 fi
 
 
