@@ -3,6 +3,8 @@
 NUMBER1=$1
 NUMBER2=$2
 
+#-gt, -lt, -eq, -ge, -le
+
 if [ $NUMBER1 -gt 10 ]
 then
     echo "Your Entered Number is greater than 10"
