@@ -11,9 +11,9 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then   
     echo -e $Y "Please Provide ROOT access.." $N
+    exit 2
 else    
     echo -e $G"You Have already SUDO access..."$N
-    exit 2
 fi
 
 
