@@ -14,6 +14,12 @@ Y="\e[33m"
 N="\e[0m"
 
 USERID=$(id -u)
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
+
+
+
 if [ $USERID -ne 0 ]
 then   
     echo -e $R "Please Provide ROOT access.." $N
@@ -22,9 +28,7 @@ else
     echo -e $G"You Have already SUDO access..."$N
 fi
 
-TIMESTAMP=$(date +%F-%H-%M-%S)
-LOGFILE=/tmp/$SCRIPTNAME-$TIMESTAMP.log
-SCRIPTNAME=$(echo $0 | cut -d "." -f1)
+
 
 for packages in $@
 do
